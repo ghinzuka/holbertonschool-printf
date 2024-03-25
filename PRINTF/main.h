@@ -22,7 +22,6 @@ typedef struct type
 {
 	char t;
 	void(*f)(va_list);
-
 } type;
 
 #endif

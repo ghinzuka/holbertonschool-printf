@@ -5,5 +5,6 @@
  */
 void printchar(va_list par)
 {
-	_putchar(va_arg(par, int);
+	_putchar(va_arg(par, int));
+	_putchar("\n");
 }

@@ -9,12 +9,8 @@ int _printf(const char *format, ...)
 int i, j;
 va_list par;
 
-type s[] {
-	{'c', printchar},
-	{'s', printstr},
-	{'%', printpercent},
-	{'d', printdec},
-	{'i', printint}
+type s[] = {
+	{'c', printchar}
 };
 
 va_start (par, format);
@@ -35,6 +31,6 @@ i = 0;
 		i++;
 	}
 va_end(par);
-_putchar(\n);
+return(0);
 }
 
