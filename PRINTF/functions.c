@@ -39,6 +39,7 @@ return (i);
  */
 int printpercent(va_list par)
 {
-	_putchar(va_arg(par, int));
+	(void)par;
+	_putchar(37);
 	return (1);
 }
