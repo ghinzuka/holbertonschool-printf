@@ -4,17 +4,17 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-void printchar(va_list par);
+int printchar(va_list par);
 int printstr(va_list par);
 int _putchar(char c);
-void printint(va_list par);
-void printdec(va_list par);
-void printpercent(va_list par);
+int printint(va_list par);
+int printdec(va_list par);
+int printpercent(va_list par);
 int _printf(const char *format, ...);
 
 /**
  * struc type - struct 
- * @t: type
+ * @t: type of the input
  * @f pointer to function
  */
 

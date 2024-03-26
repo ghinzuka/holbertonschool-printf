@@ -3,9 +3,10 @@
  * printchar - print a character
  * @par: parameter
  */
-void printchar(va_list par)
+int printchar(va_list par)
 {
 	_putchar(va_arg(par, int));
+	return (1);
 }
 /*
  * printstr - print a string
@@ -17,10 +18,15 @@ int printstr(va_list par)
 	int i = 0;
 	char *s;
 	s = va_arg(par, char *);
-	
-	while (s[j])
+	if (s == NULL)
 	{
-		_putchar(s[j]);
+	s = "(null)";
 	}
-return (j);
+
+	while (s[i])
+	{
+		_putchar(s[i]);
+		i++;
+	}
+return (i);
 }

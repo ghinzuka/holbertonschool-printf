@@ -10,7 +10,8 @@ int i, j;
 va_list par;
 
 type s[] = {
-	{'c', printchar}
+	{'c', printchar},
+	{'s', printstr}
 };
 
 va_start (par, format);
