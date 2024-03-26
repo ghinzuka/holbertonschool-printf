@@ -39,7 +39,7 @@ return (i);
  */
 int printpercent(va_list par)
 {
-	(void)par;
+	(void)par; /*void the parameter for compilation*/
 	_putchar(37);
 	return (1);
 }
