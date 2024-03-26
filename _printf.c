@@ -42,6 +42,6 @@ i = 0;
 		i++;
 	}
 va_end(par);
-return(0);
+return(1);
 }
 
