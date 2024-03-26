@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  *_printf - function that produces output accord to a format
  *@format : format to produce
  *Return: the result
@@ -15,21 +15,20 @@ type s[] = {
 	{'%', printpercent}
 };
 
-va_start (par, format);
+va_start(par, format);
 
 i = 0;
 
 	while (format && format[i])
-	{ 
-		if (format[i] !='%')
+	{
+		if (format[i] != '%')
 		{
 			_putchar(format[i]);
 		}
 		else if (format[i] == '%')
 		{
 			format++;
-			
-			j = 0; 
+			j = 0;
 			while (s[j].t)
 			{
 				if (s[j].t == format[i])
@@ -42,6 +41,6 @@ i = 0;
 		i++;
 	}
 va_end(par);
-return(1);
+return (1);
 }
 
