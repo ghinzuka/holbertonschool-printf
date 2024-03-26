@@ -1,53 +1,68 @@
 #include "main.h"
 /**
- *_printf - function that produces output accord to a format
- *@format : format to produce
- *Return: the result
+ * selec_format - selection a type to print
+ * @format: format to produce
+ * @par: argument
+ * Return: count the number of character
  */
-int _printf(const char *format, ...)
+int selec_format(const char *format, va_list par)
 {
 int i, j;
-va_list par;
 int count = 0;
 
 type s[] = {
 	{'c', printchar},
 	{'s', printstr},
-	{'%', printpercent}
+	{'%', printpercent},
+	{0, NULL}
 };
-
-va_start (par, format);
 
 i = 0;
 
-if (format == NULL)
-{
-return (-1);
-}
-
 	while (format && format[i])
 	{
-		if (format[i] !='%')
+		if (format[i] != '%')
 		{
 			_putchar(format[i]);
 			count++;
 		}
 		else if (format[i] == '%')
-		{	
-			format++;
-			j = 0; 
+		{
+			i++;
+			j = 0;
 			while (s[j].t)
 			{
 				if (s[j].t == format[i])
 				{
 					count += s[j].f(par);
+					break;
 				}
 				j++;
 			}
 		}
 		i++;
 	}
-va_end(par);
-return(count);
+return (count);
 }
 
+/**
+ * _printf - function that output the stdout
+ * @format: format to print
+ * Return: return the lenght of the output
+*/
+int _printf(const char *format, ...)
+{
+	va_list par;
+	int count;
+
+	va_start(par, format);
+
+	if (format == NULL)
+	{
+		return (-1);
+	}
+	count = selec_format(format, par);
+
+	va_end(par);
+	return (count);
+}
