@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 void printchar(va_list par);
-void printstr(va_list par);
+int printstr(va_list par);
 int _putchar(char c);
 void printint(va_list par);
 void printdec(va_list par);
@@ -20,7 +20,7 @@ int _printf(const char *format, ...);
 
 typedef struct type
 {
-	char t;
+	char *t;
 	void(*f)(va_list);
 } type;
 
