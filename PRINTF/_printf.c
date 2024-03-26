@@ -11,7 +11,8 @@ va_list par;
 
 type s[] = {
 	{'c', printchar},
-	{'s', printstr}
+	{'s', printstr},
+	{'%', printpercent}
 };
 
 va_start (par, format);
