@@ -8,6 +8,7 @@ int _printf(const char *format, ...)
 {
 int i, j;
 va_list par;
+int count = 0;
 
 type s[] = {
 	{'c', printchar},
@@ -15,25 +16,28 @@ type s[] = {
 	{'%', printpercent}
 };
 
-va_start(par, format);
+va_start (par, format);
 
 i = 0;
 
+if (format == NULL)
+	return (-1);
 	while (format && format[i])
 	{
-		if (format[i] != '%')
+		if (format[i] !='%')
 		{
 			_putchar(format[i]);
+			count++;
 		}
 		else if (format[i] == '%')
-		{
+		{	
 			format++;
-			j = 0;
+			j = 0; 
 			while (s[j].t)
 			{
 				if (s[j].t == format[i])
 				{
-					s[j].f(par);
+					count += s[j].f(par);
 				}
 				j++;
 			}
@@ -41,6 +45,6 @@ i = 0;
 		i++;
 	}
 va_end(par);
-return (1);
+return(count);
 }
 
