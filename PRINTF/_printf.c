@@ -19,15 +19,24 @@ va_start (par, format);
 i = 0;
 
 	while (format && format[i])
-	{
-		j = 0; 
-		while (s[j].t)
+	{ 
+		if (format[i] !='%')
 		{
-			if (s[j].t == format[i])
+			_putchar(format[i]);
+		}
+		else if (format[i] == '%')
+		{
+			format++;
+			
+			j = 0; 
+			while (s[j].t)
 			{
-				s[j].f(par);
+				if (s[j].t == format[i])
+				{
+					s[j].f(par);
+				}
+				j++;
 			}
-			j++;
 		}
 		i++;
 	}

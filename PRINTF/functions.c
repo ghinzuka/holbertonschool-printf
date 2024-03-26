@@ -2,6 +2,7 @@
 /*
  * printchar - print a character
  * @par: parameter
+ * Return: the lenght
  */
 int printchar(va_list par)
 {
@@ -11,7 +12,7 @@ int printchar(va_list par)
 /*
  * printstr - print a string
  * @par: parameter
- * Return: the string
+ * Return: lenght of the string
  */
 int printstr(va_list par)
 {

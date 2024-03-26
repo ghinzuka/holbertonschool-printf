@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-
+/**
+* call all the functions in the header
+*/
 int printchar(va_list par);
 int printstr(va_list par);
 int _putchar(char c);
@@ -18,10 +20,10 @@ int _printf(const char *format, ...);
  * @f pointer to function
  */
 
-typedef struct type
+typedef struct type /*define the strctur to link type with function*/
 {
-	char *t;
-	void(*f)(va_list);
+	char t;
+	int(*f)(va_list);
 } type;
 
 #endif
