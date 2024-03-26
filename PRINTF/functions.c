@@ -31,3 +31,14 @@ int printstr(va_list par)
 	}
 return (i);
 }
+
+/*
+ * printpercent - print a the percent symbol
+ * @par: parameter
+ * Return: 1
+ */
+int printpercent(va_list par)
+{
+	_putchar(va_arg(par, int));
+	return (1);
+}
