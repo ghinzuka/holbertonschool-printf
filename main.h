@@ -12,6 +12,7 @@ int printint(va_list par);
 int printdec(va_list par);
 int printpercent(va_list par);
 int _printf(const char *format, ...);
+int selec_format(const char *format, va_list par);
 
 /**
  * struct type - struct
