@@ -64,5 +64,5 @@ int _printf(const char *format, ...)
 	count = selec_format(format, par);
 
 	va_end(par);
-	return (count);
+	return (count - 1);
 }
