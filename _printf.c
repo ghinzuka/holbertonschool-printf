@@ -14,6 +14,8 @@ type s[] = {
 	{'c', printchar},
 	{'s', printstr},
 	{'%', printpercent},
+	{'i', printnumb},
+	{'d', printnumb},
 	{0, NULL}
 };
 
