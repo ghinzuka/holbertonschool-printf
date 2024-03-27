@@ -28,7 +28,7 @@ i = 0;
 			_putchar(format[i]);
 			count++;
 		}
-		else if (format[i] == '%')
+		else if (format[i] == '%' && format[i + 1] != 'K' && format[i + 1] != '!')
 		{
 			i++;
 			j = 0;
