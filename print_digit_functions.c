@@ -18,7 +18,7 @@ int printnumb(va_list par)
 		count++;
 		i = (i * -1);
 	}
-	while ( i / base > 9)
+	while (i / base > 9)
 	{
 		base *= 10;
 	}
