@@ -6,8 +6,7 @@
  */
 int printchar(va_list par)
 {
-	_putchar(va_arg(par, int));
-	return (1);
+	return (_putchar(va_arg(par, int)));
 }
 /**
  * printstr - print a string
@@ -26,7 +25,7 @@ int printstr(va_list par)
 	s = "(null)";
 	}
 
-	while (s[i])
+	while (s[i] !='\0')
 	{
 		_putchar(s[i]);
 		i++;
