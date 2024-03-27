@@ -23,12 +23,7 @@ i = 0;
 
 	while (format && format[i])
 	{
-		if (format[i] != '%')
-		{
-			_putchar(format[i]);
-			count++;
-		}
-		else if (format[i] == '%' && format[i + 1] != 'K' && format[i + 1] != '!')
+		if (format[i] == '%' && format[i + 1] != 'K' && format[i + 1] != '!')
 		{
 			i++;
 			j = 0;
@@ -41,6 +36,11 @@ i = 0;
 				}
 				j++;
 			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			count++;
 		}
 		i++;
 	}
