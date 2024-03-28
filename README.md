@@ -27,7 +27,10 @@ format is a character string. The format string is composed of zero or more dire
 
 ## Examples
 
-```_printf("String:[%s]\n", "I am a string !");```
+`#include "main.h"`
+`int main(void)`
+`_printf("String:[%s]\n", "I am a string !");`
+`Return (0);`
 
 Output
 
