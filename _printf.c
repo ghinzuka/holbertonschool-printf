@@ -14,8 +14,6 @@ type s[] = {
 	{'c', printchar},
 	{'s', printstr},
 	{'%', printpercent},
-	{'i', printnumb},
-	{'d', printnumb},
 	{0, NULL}
 };
 
@@ -26,6 +24,10 @@ i = 0;
 		if (format[i] == '%' && format[i + 1] != 'K' && format[i + 1] != '!')
 		{
 			i++;
+			if (format[i] == 'i' || format[i] == 'd')
+			{
+				count += printnumb((long)(va_arg(par, int)), 10);
+			}
 			j = 0;
 			while (s[j].t)
 			{
