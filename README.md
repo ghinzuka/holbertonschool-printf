@@ -24,3 +24,10 @@ format is a character string. The format string is composed of zero or more dire
 |------|----------|------|
 |Return -1|When the format is NULL or when the format is only 1 character and is equal to : %|Nothing|
 |Return NULL lenght|When the format is the a string and is NULL|(null)|
+
+## Examples
+
+` _printf("String:[%s]\n", "I am a string !");`
+Output
+
+`String:[I am a string !]`
