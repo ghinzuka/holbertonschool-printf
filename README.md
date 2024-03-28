@@ -14,3 +14,6 @@ format is a character string. The format string is composed of zero or more dire
 |Specifier|Output|
 |---------|------|
 |C|Character|
+|S|String of Characters|
+|%|Character %|
+|I or D|Integers in base 10|
