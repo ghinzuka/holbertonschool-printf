@@ -26,7 +26,7 @@ format is a character string. The format string is composed of zero or more dire
 |Return NULL lenght|When the format is the a string and is NULL|(null)|
 
 ## Examples
-
+### string
 ```
 #include "main.h"
 int main(void)
@@ -38,4 +38,17 @@ Output
 
 ```
 String:[I am a string !]
+```
+### character
+``` 
+#include "main.h"
+int main(void)
+_printf("Character:[%c]\n", 'H');
+Return (0);
+```
+
+output
+
+```
+Character:[H]
 ```
