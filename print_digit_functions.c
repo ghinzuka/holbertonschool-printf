@@ -1,32 +1,26 @@
 #include "main.h"
 /**
  * printnumb - print a digit in base 10
- * @par: parameter
+ * @n: number to check created with var_arg
+ * @base: base in wich we want to output in stdout
  * Return: the lenght
  */
-int printnumb(va_list par)
+int printnumb(long n, int base)
 {
-	int i;
-	int base = 1;
-	int count = 0;
+	int count;
 
-	i = va_arg(par, int);
-
-	if (i < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		count++;
-		i = (i * -1);
+		return (printnumb(-n, base) + 1);
 	}
-	while ( i / base > 9)
+	else if (n < base)
 	{
-		base *= 10;
+		return (_putchar(n + '0'));
 	}
-	while (base != 0)
+	else
 	{
-		count += _putchar(i / base + '0');
-		i = i % base;
-		base = base / 10;
+		count = printnumb(n / base, base);
+		return (count + printnumb(n % base, base));
 	}
-	return (count);
 }

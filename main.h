@@ -8,7 +8,7 @@
 int printchar(va_list par);
 int printstr(va_list par);
 int _putchar(char c);
-int printnumb(va_list par);
+int printnumb(long n, int base);
 int printpercent(va_list par);
 int _printf(const char *format, ...);
 int selec_format(const char *format, va_list par);
