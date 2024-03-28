@@ -52,5 +52,9 @@ output
 ```
 Character:[H]
 ```
-## Flowchart
+## Flowchart _printf
+![flowchart_printf drawio_720](https://github.com/ghinzuka/holbertonschool-printf/assets/102736316/34066c32-36cd-4347-9c99-e6adade0d90b)
+## Flowchart _select_format
+![flowchart_select_format drawio_720](https://github.com/ghinzuka/holbertonschool-printf/assets/102736316/67cee97b-c494-492d-b686-fc018a7b3e10)
+
 
