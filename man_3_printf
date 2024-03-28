@@ -1,0 +1,51 @@
+.TH _printf "Version 1.0" "28/03/2024"
+.SH _printf
+_printf \- function that produces output according to a format.
+
+.SH SYNOPSIS
+.B _printf (constant char *format, ...)
+
+.SH DESCRIPTION
+this is a customized function that replicates the functionality of the printf function present in the C standard library. 
+It was developed as a project during the Holberton School course. 
+The function takes a format string and additional arguments, produces formatted output to stdout, and returns the length of the output sent to stdout.
+The list of sepcifiers 'c' for character 's' for string '%' for the percent symbol 'i' for integer in base 10, 'd' for decimal in base 10.
+
+
+.SH RETURN
+if function is successfull it return the lenght of the output excluding the NULL byte and the end of the string
+if function is not successfull or detect problem return -1
+
+.SH ERRORS
+if string is NULL, the output will be (null)
+
+.SH EXAMPLE
+for sepcifiers c:
+
+ _printf("Character:[%c]\n", 'H');
+ output Character:[H]
+
+for sepcifiers s:
+
+ _printf("String:[%s]\n", "I am a string !");
+ output String:[I am a string !]
+
+ for sepcifiers %:
+ _printf("Percent:[%%]\n");
+ output Percent:[%]
+
+
+.SH SEE ALSO
+
+Man printf()
+
+.SH AUTHORS
+
+Nour Chaouch
+Baptiste Pouquerou
+
+.SH COPYRIGHT
+Copyright © [2024] [Holberton School].
+
+.SH LICENSE
+Ce programme est distribué sous les termes de la [license MIT].
